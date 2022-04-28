@@ -5,7 +5,7 @@ class WeatherTile extends StatelessWidget {
   String title;
   String subtitle;
 
-  WeatherTile({required this.icon, required this.title, required this.subtitle});
+  WeatherTile({Key? key, required this.icon, required this.title, required this.subtitle}) : super(key: key);
 
   @override
   Widget build (BuildContext context) {
@@ -18,14 +18,14 @@ class WeatherTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
             fontSize: 18.0,
             fontWeight: FontWeight.w600
         ),
       ),
       subtitle: Text(
         subtitle,
-        style: TextStyle(
+        style: const TextStyle(
             fontSize: 16.0,
             fontWeight: FontWeight.w600,
             color: Color(0xff9e9e9e)
